@@ -3,10 +3,10 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - main
+      - develop
   pull_request:
     branches:
-      - main
+      - develop
 
 jobs:
   build-frontend:
@@ -46,7 +46,7 @@ jobs:
 
   build-backend:
     name: Build and Test Backend
-    runs-on: ubuntu-latest  # ✅ Fix: Changed from Windows to Ubuntu (Linux)
+    runs-on: Windows  # ✅ Fix: Changed from Windows to Ubuntu (Linux)
 
     services:
       mysql:
